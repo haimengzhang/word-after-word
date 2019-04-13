@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import logo from './logo.png'
 import './App.css'
+import Prompt from './components/Prompt'
 
 class App extends Component {
   render () {
@@ -8,9 +9,11 @@ class App extends Component {
       <div className='App'>
         <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
-          <p>Start writing today.</p>
-          <p>Write a short story where the main characte is a "House".</p>
+          <h3> Start writing today.</h3>
         </header>
+        <body>
+          <Prompt />
+        </body>
       </div>
     )
   }
