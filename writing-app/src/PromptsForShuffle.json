@@ -1,0 +1,20 @@
+{
+    "prompts": [
+
+        {
+            "id": 1,
+            "description": " This is an example prompt.",
+            "category": "Fiction"
+        },
+        {
+            "id": 2,
+            "description": " Write a poem about your first pet.",
+            "category": "Non-Fiction"
+        },
+        {
+            "id": 3,
+            "description": " Sit down and listen. Write down the sounds your hear.",
+            "category": "Non-Fiction"
+        }
+    ]
+}
