@@ -12,3 +12,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.user-input textarea {
+  border: none;
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.user-input  {
+  width: 80%;
+  height: 300px;
+  margin: 0 0 20px 0;
+  padding: 10px;
+}
