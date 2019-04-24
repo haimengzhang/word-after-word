@@ -12,11 +12,24 @@ class Prompt extends Component {
     return (
       <div className='typing-prompt'>
         <p> {this.props.value.description}</p>
-        
       </div>
     )
   }
 }
+
+class UserInput extends Component {
+
+  render () {
+    return (
+      <div className='user-input'>
+        <textarea placeholder="Enter you response here."></textarea>
+        <br></br>
+        <input type="submit" value="Submit Response"></input>
+      </div>
+    )
+  }
+}
+
 class App extends Component {
   constructor(props){
     super(props)
@@ -49,7 +62,8 @@ class App extends Component {
           <div>
           {this.renderPrompt(this.state.curIndex)}
           </div>
-          <button className="shuffle" onClick={ () => this.shuffle(this.state.curIndex)}> Shuffle </button>
+          <UserInput></UserInput>
+          <button className="shuffle" onClick={ () => this.shuffle(this.state.curIndex)}> Change Prompt </button>
 
         </header>
         <body />
