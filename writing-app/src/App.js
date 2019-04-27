@@ -22,9 +22,9 @@ class UserInput extends Component {
   render () {
     return (
       <div className='user-input'>
-        <textarea placeholder="Enter you response here."></textarea>
-        <br></br>
-        <input type="submit" value="Submit Response"></input>
+        <textarea placeholder="Enter you response here."/>
+        <br/>
+        <input type="submit" value="Submit Response"/>
       </div>
     )
   }
@@ -32,7 +32,7 @@ class UserInput extends Component {
 
 class App extends Component {
   constructor(props){
-    super(props)
+    super(props);
     this.state={
       prompts: PROMPTS,
       curIndex: 0,
@@ -40,16 +40,29 @@ class App extends Component {
   }
   renderPrompt(curIndex){
     return (
-      <Prompt value={this.state.prompts[curIndex]}></Prompt>
+      <Prompt value={this.state.prompts[curIndex]}/>
     )
   }
-  shuffle(curIndex){
+  nextPrompt(curIndex){
     if (curIndex + 1 < PROMPTS.length){
       this.setState({
         curIndex: this.state.curIndex + 1
       })
     } else {
       this.setState({curIndex:0,})
+    }
+
+  }
+
+  formerPrompt(curIndex) {
+    if (curIndex === 0) {
+      // change curIndex to the last index
+      this.setState( {
+        curIndex: PROMPTS.length - 1
+      })
+    } else {
+      // change curIndex to the former index
+      this.setState({curIndex: curIndex - 1})
     }
 
   }
@@ -62,8 +75,9 @@ class App extends Component {
           <div>
           {this.renderPrompt(this.state.curIndex)}
           </div>
-          <button className="shuffle" onClick={ () => this.shuffle(this.state.curIndex)}> Change Prompt </button>
-          <UserInput></UserInput>
+          <button className="former-prompt" onClick={() => this.formerPrompt(this.state.curIndex)}> Former Prompt</button>
+          <button className="next-prompt" onClick={ () => this.nextPrompt(this.state.curIndex)}> Next Prompt </button>
+        <UserInput/>
 
         </header>
         <body />
