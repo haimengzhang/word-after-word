@@ -62,8 +62,8 @@ class App extends Component {
           <div>
           {this.renderPrompt(this.state.curIndex)}
           </div>
-          <UserInput></UserInput>
           <button className="shuffle" onClick={ () => this.shuffle(this.state.curIndex)}> Change Prompt </button>
+          <UserInput></UserInput>
 
         </header>
         <body />
