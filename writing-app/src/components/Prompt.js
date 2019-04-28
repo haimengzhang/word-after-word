@@ -48,7 +48,7 @@ class Prompt extends Component {
         <div className='typing-prompt'>
           <p> {this.state.curPrompt} </p>
           <button className="previous-prompt" onClick={this.prevPrompt}> Previous </button>
-          <button className="next-promt" onClick={this.nextPrompt}> Next </button>
+          <button className="next-prompt" onClick={this.nextPrompt}> Next </button>
         </div>
     )
   }
