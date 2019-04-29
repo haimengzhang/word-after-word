@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+
 body {
   margin: 0;
   padding: 0;
@@ -28,4 +30,11 @@ code {
   height: 300px;
   margin: 0 0 20px 0;
   padding: 10px;
+}
+
+.display-prompt{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+ 
 }
