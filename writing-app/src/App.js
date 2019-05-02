@@ -4,11 +4,10 @@ import './App.css'
 import Prompt from './components/Prompt'
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-    };
-  };
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
 
   render () {
     return (
@@ -17,7 +16,7 @@ class App extends Component {
           <img src={logo} className='App-logo' alt='logo' />
           <h4> Start writing today.</h4>
         </header>
-        <Prompt/>
+        <Prompt />
       </div>
     )
   }
