@@ -29,7 +29,7 @@ class ToggleButton extends Component {
 
     return (
       <Fab color='primary' className={useStyles.shuffle} onClick={onPress}>
-        {(name = 'Next' ? <ShuffleIcon /> : <ArrowBackIcon />)}
+        {name === 'Next' ? <ShuffleIcon /> : <ArrowBackIcon />}
       </Fab>
     )
   }
@@ -84,8 +84,8 @@ class Prompt extends Component {
       <div className='typing-prompt'>
         <p> {this.state.curPrompt} </p>
         <div>
-          <ToggleButton buttonName={'Next'} onPress={this.nextPrompt} />
           <ToggleButton buttonName={'Previous'} onPress={this.prevPrompt} />
+          <ToggleButton buttonName={'Next'} onPress={this.nextPrompt} />
         </div>
       </div>
     )

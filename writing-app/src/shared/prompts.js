@@ -9,7 +9,7 @@ export const PROMPTS = [{
         id: 1,
         category: 'non-fiction',
         title: 'A day in life',
-        description: 'Write about your daily habits and routine',
+        description: 'Write about your daily habits and routine.',
 
     },
     {
