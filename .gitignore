@@ -1,0 +1,4 @@
+
+*.xml
+.DS_Store
+.idea/word-after-word.iml
